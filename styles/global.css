@@ -1,9 +1,9 @@
+
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* Global Styles */
-
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +16,31 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #333333;
+}
+
+/* Glass Effects */
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(15, 23, 42, 0.15);
+    backdrop-filter: blur(16px);
+    color: #0f172a;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.dark .glass-card {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #f8fafc;
+}
+
+.glass-nav {
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(15, 23, 42, 0.15);
+    backdrop-filter: blur(16px);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.dark .glass-nav {
+    background: rgba(5, 5, 5, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }

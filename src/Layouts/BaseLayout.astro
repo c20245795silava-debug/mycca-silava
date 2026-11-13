@@ -1,23 +1,23 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import "../styles/global.css";
-const name = "Mycca Silava";
-const position = "AI Software Engineer";
+import "../../styles/global.css";
 ---
 
-<html lang="en">
+<html lang="en" class="dark scroll-smooth">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>{name} {position}</title>
+        <title>Mycca Silava | AI Software Engineer</title>
     </head>
-    <body>
-        <header />
+    <body
+        class="bg-slate-50 dark:bg-black text-slate-900 dark:text-slate-100 transition-colors duration-500 min-h-screen relative overflow-x-hidden">
+        <Header />
         <slot />
-        <footer />
+        <Footer />
+        <script src="../script/animation.js"></script>
     </body>
 </html>
