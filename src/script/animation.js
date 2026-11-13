@@ -17,6 +17,11 @@ if (themeButton) {
     themeButton.addEventListener("click", () => {
         root.classList.toggle("dark");
         updateThemeButton();
+        gsap.to(themeButton, {
+            rotation: "+=360",
+            duration: 0.6,
+            ease: "power2.inOut",
+        });
         gsap.fromTo(
             themeButton,
             { scale: 0.85 },

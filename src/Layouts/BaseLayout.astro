@@ -11,13 +11,21 @@ import "../../styles/global.css";
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>Mycca Silava | AI Software Engineer</title>
+        <title>Mycca Silava</title>
     </head>
     <body
         class="bg-slate-50 dark:bg-black text-slate-900 dark:text-slate-100 transition-colors duration-500 min-h-screen relative overflow-x-hidden">
+        <div id="progressBar" class="fixed top-0 left-0 z-50 h-1 w-full origin-left bg-red-500"></div>
+        <div id="leafLayer" aria-hidden="true"></div>
         <Header />
         <slot />
+        <div class="tiny-note" aria-hidden="true">MYCCA SILAVA · PORTFOLIO</div>
         <Footer />
         <script src="../script/animation.js"></script>
+        <script>
+            import { FallingLeaves } from "falling-leaves";
+
+            new FallingLeaves({ shapes: ["maple", "oak", "ginkgo", "birch", "oval"] });
+        </script>
     </body>
 </html>
